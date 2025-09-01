@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-top: 60px; /* Adjust as needed */
+  padding-top: 55px; /* Adjust as needed */
 
   color: #333;
 }
@@ -326,4 +326,5 @@ select {
     font-size: 13px;
     margin-bottom: 6px;
   }
+
 }
