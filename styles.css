@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-top: 40px; /* Adjust as needed */
+  padding-top: 60px; /* Adjust as needed */
 
   color: #333;
 }
@@ -328,4 +328,5 @@ select {
   }
 
 }
+
 
