@@ -1,0 +1,170 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  /* background-color: #000; */
+  color: #fff;
+}
+
+/* 🌌 Animated GIF Background */
+.background-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Login.gif') center center / cover no-repeat;
+  z-index: -3;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* 🌠 Foreground Container */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ✨ Floating Quotes Layer */
+#quoteLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* ✨ Individual Quote Style */
+.floating-quote {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.555);
+  white-space: nowrap;
+  animation: fadeFloat 7s ease-in-out forwards;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes fadeFloat {
+  0% { opacity: 0; transform: translateY(20px); }
+  50% { opacity: 0.4; }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 🌕 Moon */
+.moon {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 120px;
+  z-index: -1;
+  animation: floatMoon 8s ease-in-out infinite;
+}
+
+/* 👨‍🚀 Astronaut */
+.astronaut {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 100px;
+  z-index: -1;
+  animation: floatAstronaut 6s ease-in-out infinite;
+}
+
+/* 🔐 Login Overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 20, 30, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 500px;
+}
+
+.overlay h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* 🧾 Form Inputs */
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  color: #aaa;
+}
+
+/* 🎯 Buttons */
+.actions button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #00bfff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions button:hover {
+  background: #0099cc;
+}
+
+/* 🚨 Error Message */
+.error-message {
+  font-size: 0.9rem;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+/* 🌬️ Animations */
+@keyframes floatMoon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatAstronaut {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📱 Responsive */
+@media (max-width: 400px) {
+  .overlay {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .moon, .astronaut {
+    width: 80px;
+  }
+}

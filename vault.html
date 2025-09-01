@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vault Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script>
+    if (sessionStorage.getItem("auth") !== "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
+<body>
+
+  <!-- 🏢 Company Logo -->
+  <img src="Header.gif" id="mainLogo" alt="Company Logo" />
+
+  <!-- 🔓 Logout Button -->
+  <div class="logout-button">
+  <button onclick="logout()">
+    <span class="logout-icon">
+      <svg width="20" height="20" viewBox="0 0 24 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 3h-2v10h2V3zm4.83 2.17a1 1 0 0 0-1.41 1.41 7 7 0 1 1-9.24 0 1 1 0 0 0-1.41-1.41 9 9 0 1 0 12.06 0z"/>
+      </svg>
+    </span>
+  </button>
+</div>
+
+  <!-- 🧩 Dashboard Container -->
+  <div class="outer-panel">
+    <div class="dashboard">
+
+      <!-- 🎛 Left Panel -->
+      <div class="left-panel">
+        <div class="section">
+          <label for="entityType">Select Entity:</label>
+          <div class="input-with-loader">
+            <select id="entityType">
+              <option value="">--Choose--</option>
+            </select>
+            <div id="entityLoader" class="loader" style="display: none;"></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <label for="firmName">Select Name:</label>
+          <select id="firmName">
+            <option value="">--Choose--</option>
+          </select>
+          <div id="nameLoader" class="loader" style="display: none;"></div>
+        </div>
+
+        <div class="section">
+          <label for="docType">Select Document Type:</label>
+          <select id="docType">
+            <option value="">--Choose--</option>
+          </select>
+          <div id="docLoader" class="loader" style="display: none;"></div>
+        </div>
+
+        <!-- 🖼️ Firm Logo Section -->
+        <div class="section logo-section">
+          <div class="logo-box">
+            <img id="firmLogo" src="PlaceHolder.gif" alt="Firm Logo" />
+            <img id="firmLogoSmall" src="PlaceHolderSmall.gif" alt="Small Firm Logo" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 📄 Right Panel -->
+      <div class="right-panel">
+        <div class="section">
+          <h3>Documents:</h3>
+          <iframe id="documentDisplay" src="" frameborder="0"></iframe>
+        </div>
+
+        <div class="section download-btn">
+          <button onclick="downloadDocument()">Download Document</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🔁 Logout Logic -->
+  <script>
+    function logout() {
+      sessionStorage.clear();
+      window.location.href = "index.html";
+    }
+
+    let logoutTimer = setTimeout(logout, 120000);
+    ['click', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(evt => {
+      document.addEventListener(evt, () => {
+        clearTimeout(logoutTimer);
+        logoutTimer = setTimeout(logout, 120000);
+      }, true);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+/* 🌅 Overall Page Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('Opening.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 60px; /* Adjust as needed */
+
+  color: #333;
+}
+
+/* 🏢 Company Logo */
+#mainLogo {
+  display: block;
+  margin: 0px auto 10px auto;
+  max-width: 600px;
+}
+
+/* 🔓 Logout Button */
+.logout-button {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  z-index: 10;
+}
+
+.logout-button button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logout-icon {
+  font-size: 18px;
+}
+
+.logout-text {
+  font-size: 14px;
+}
+
+/* 🧩 Outer Container */
+.outer-panel {
+  background-color: #a6c4f1ee;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ⚙️ Dashboard Layout */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+/* 🎛 Panels */
+.left-panel {
+  background-color: #ffffffdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 40%;
+  min-width: 280px;
+  max-width: 360px;
+  flex-shrink: 1;
+}
+
+.right-panel {
+  background-color: #ffffffdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 55%;
+  min-width: 320px;
+  flex-grow: 1;
+}
+
+/* 📦 Sections */
+.section {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* 📝 Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 14px;
+}
+
+/* 🔽 Dropdowns */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: linear-gradient(to right, #ffffff, #f0f9ff);
+}
+
+/* 🖼️ Firm Logo Section */
+.logo-section {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto;
+}
+
+#firmLogo {
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#firmLogoSmall {
+  display: none;
+}
+
+/* 🔄 Loader */
+.input-with-loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #00bfff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 📄 Document Display */
+#documentDisplay {
+  width: 100%;
+  min-height: 300px;
+  background-color: #fffdfd;
+  padding: 10px;
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 📥 Download Button */
+.download-btn {
+  text-align: center;
+}
+
+.download-btn button {
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.download-btn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 📱 Mobile Layout */
+@media (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-x: hidden;
+    background-color: transparent;
+  }
+
+  #mainLogo {
+    max-width: 240px;
+    margin: 16px auto;
+  }
+
+  .logout-button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+  }
+
+  .logout-text {
+    display: none;
+  }
+
+  .logout-icon {
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .outer-panel {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 11px;
+    background-color: #ffffffee;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .section {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logo-section {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+  }
+
+  label {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+
+  select {
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 4px;
+  }
+
+  .loader {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+  }
+
+  #documentDisplay {
+    min-height: 40px;
+    padding: 4px;
+    font-size: 10px;
+    border-width: 1px;
+  }
+
+  .download-btn button {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .logo-box {
+    height: auto;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #firmLogo {
+    display: none;
+  }
+
+  #firmLogoSmall {
+    display: block;
+    width: 270px;
+    height: auto;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none;
+    line-height: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .section:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  h3 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+}

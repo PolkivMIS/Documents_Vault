@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <!-- 🌌 Animated GIF background -->
+  <div class="background-gif"></div>
+
+  <!-- 🌠 Foreground container -->
+  <div class="background">
+    <!-- ✨ Floating quotes layer -->
+    <div id="quoteLayer"></div>
+
+    <!-- 🌕 Moon and 👨‍🚀 Astronaut -->
+    <img src="satellite.png" class="moon" alt="Moon" />
+    <img src="ROUND.gif" class="astronaut" alt="Astronaut" />
+
+    <!-- 🔐 Login overlay -->
+    <div class="overlay">
+      <h2>Welcome Back</h2>
+      <form class="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        
+        <!-- 🚨 Error message box -->
+        <div class="error-message" style="display:none; color: red; margin-top: 10px;"></div>
+        
+        <div class="actions">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="quotes.js"></script>
+</body>
+</html>
